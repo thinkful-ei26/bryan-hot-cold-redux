@@ -7,15 +7,15 @@ import InfoSection from './info-section'
 
 const Game = () => {
   return (
-  <div>
-    <Header />
-    <main role='main'>
-      <GuessSection />
-      <StatusSection />
-      <InfoSection />
-    </main>
-  </div>
-)
-  }
+    <div>
+      <Header />
+      <main role='main'>
+        <GuessSection />
+        <StatusSection />
+        <InfoSection />
+      </main>
+    </div>
+  )
+}
 
 export default Game

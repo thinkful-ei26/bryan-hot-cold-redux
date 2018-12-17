@@ -1,19 +1,23 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import './guess-form.css'
 import { makeGuess } from '../actions'
 
-export default class GuessForm extends React.Component {
+export class GuessForm extends Component {
   onSubmit(event) {
     event.preventDefault()
 
-    if (this.props.onMakeGuess) {
-      const value = this.input.value
+    const value = this.input.value
+    console.log(value)
+    
+      console.log(this)
+      console.log(this.props)
       this.props.dispatch(makeGuess(value))
-    }
     this.input.value = ''
     this.input.focus()
   }
+
+  //todo log all actions as they go through the reducer
 
   render() {
     return (
@@ -37,3 +41,5 @@ export default class GuessForm extends React.Component {
     )
   }
 }
+
+export default connect ()(GuessForm)

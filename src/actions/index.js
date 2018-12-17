@@ -1,7 +1,7 @@
 export const RESTART_GAME = 'RESTART_GAME'
-export const restartGame = correctAnswer => ({
+export const restartGame = restart => ({
     type: RESTART_GAME,
-    correctAnswer, // payload
+    restart, // payload
 })
 
 export const MAKE_GUESS = 'MAKE_GUESS'
